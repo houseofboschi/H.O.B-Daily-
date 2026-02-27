@@ -1,39 +1,64 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>H.O.B Daily</title>
 
-  <style>
-    body {
-      background:#111;
-      color:white;
-      font-family:Arial;
-      text-align:center;
-      margin-top:80px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    button{
-      padding:15px 25px;
-      font-size:18px;
-      background:#00c896;
-      border:none;
-      color:white;
-      cursor:pointer;
-      border-radius:8px;
-    }
-  </style>
+<title>H.O.B Daily</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
 
-<h1>H.O.B Daily Dashboard</h1>
+<h1>🏋️ H.O.B Daily</h1>
 
-<p id="status">App geladen ✅</p>
+<div class="card">
 
-<button onclick="testClick()">Test Button</button>
+<h2>Athlet</h2>
 
-<script src="./app.js"></script>
+<select id="athleteSelect"></select>
+<input id="newAthlete" placeholder="Neuer Athlet">
+<button id="addAthleteBtn">Anlegen</button>
+
+</div>
+
+<div class="card">
+
+<h2>RM Test</h2>
+
+<select id="rmSelect"></select>
+<input id="weightInput" type="number" placeholder="Gewicht">
+<button id="saveRMBtn">Speichern</button>
+
+</div>
+
+<div class="card">
+<h2>1RM Progress</h2>
+<canvas id="progressChart"></canvas>
+</div>
+
+<div class="card">
+<h2>🌍 Leaderboard</h2>
+
+<input id="lbName" placeholder="Name">
+<input id="lbExercise" placeholder="Übung">
+<input id="lbWeight" type="number" placeholder="Gewicht">
+
+<button id="submitLeaderboardBtn">Eintragen</button>
+
+<table>
+<tbody id="leaderboardBody"></tbody>
+</table>
+
+</div>
+
+<!-- MODULE START -->
+<script type="module" src="app.js"></script>
 
 </body>
 </html>
