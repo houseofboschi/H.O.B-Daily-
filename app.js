@@ -1,6 +1,6 @@
-console.log("JS wurde geladen");
+console.log("JS geladen ✅");
 
-function testClick() {
+window.testClick = function () {
   document.getElementById("status").innerText =
     "Button funktioniert 🚀";
-}
+};
